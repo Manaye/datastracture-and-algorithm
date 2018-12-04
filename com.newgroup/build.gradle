@@ -2,7 +2,7 @@ plugins {
     id 'java'
 }
 
-group 'com .linkedlist'
+group 'com .newgroup'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
