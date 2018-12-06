@@ -5,6 +5,9 @@ import sun.awt.image.ImageWatched;
 import java.util.ArrayList;
 
 public class LinkedList {
+//    public static LinkedList merge(LinkedList one, LinkedList two){
+//        public void mergeLists{
+
 
      private int data;
      private LinkedList next;
@@ -71,7 +74,9 @@ public class LinkedList {
         return printArr;
     }
 
-    public class append {
+
+    public  class append {
+
 
             private  class ListNode{
                 private int data;
@@ -81,10 +86,10 @@ public class LinkedList {
                     this.next = null;
                 }
 
-
             }
             //insertBefore
-            public  ListNode insertAtBeginning(ListNode head, int data) {
+
+            public ListNode insertAtBeginning(ListNode head, int data) {
                 ListNode newNode = new ListNode(data);
                 if(head == null){
                     return newNode;
@@ -95,7 +100,9 @@ public class LinkedList {
                 return head;
             }
             //insertAtEnd
-            public ListNode insertAtEnd(ListNode head, int data){
+
+            public  ListNode insertAtEnd(ListNode head, int data){
+
                 ListNode newNode = new ListNode(data);
                 if(head == null){
                     return newNode;
@@ -120,7 +127,8 @@ public class LinkedList {
                 previous.next = newNode;
             }
             //insertBefore
-            public  void insertBefore(ListNode next, int data){
+
+            public void insertBefore(ListNode next, int data){
                 if(next == null){
                     System.out.println("the given next node cannot be null.");
                     return;
@@ -143,7 +151,9 @@ public class LinkedList {
                 System.out.println(current);
             }
 
-            public void main(String[] args) {
+
+            public  void main(String[] args) {
+
                 ListNode head = new ListNode(10);
                 ListNode first = new ListNode(20);
                 ListNode second = new ListNode(5);
