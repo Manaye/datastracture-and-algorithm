@@ -3,6 +3,9 @@ package linkedlist;
 import java.util.ArrayList;
 
 public class LinkedList {
+//    public static LinkedList merge(LinkedList one, LinkedList two){
+//        public void mergeLists{
+
 
     private Node head;
 
@@ -40,9 +43,9 @@ public class LinkedList {
         return printArr;
     }
 
-    public class append {
-        public class append {
-            private static class ListNode{
+    public  class append {
+
+            private  class ListNode{
                 private int data;
                 private ListNode next;
                 public ListNode(int data){
@@ -50,10 +53,9 @@ public class LinkedList {
                     this.next = null;
                 }
 
-
             }
             //insertBefore
-            public static ListNode insertAtBeginning(ListNode head, int data) {
+            public ListNode insertAtBeginning(ListNode head, int data) {
                 ListNode newNode = new ListNode(data);
                 if(head == null){
                     return newNode;
@@ -64,7 +66,7 @@ public class LinkedList {
                 return head;
             }
             //insertAtEnd
-            public static ListNode insertAtEnd(ListNode head, int data){
+            public  ListNode insertAtEnd(ListNode head, int data){
                 ListNode newNode = new ListNode(data);
                 if(head == null){
                     return newNode;
@@ -79,7 +81,7 @@ public class LinkedList {
 
             }
             //insertAfter
-            public static void insertAfter(ListNode previous, int data){
+            public  void insertAfter(ListNode previous, int data){
                 if(previous == null){
                     System.out.println("the given previous node cannot be null.");
                     return;
@@ -89,7 +91,7 @@ public class LinkedList {
                 previous.next = newNode;
             }
             //insertBefore
-            public static void insertBefore(ListNode next, int data){
+            public void insertBefore(ListNode next, int data){
                 if(next == null){
                     System.out.println("the given next node cannot be null.");
                     return;
@@ -100,7 +102,7 @@ public class LinkedList {
             }
             //
             //display
-            public static void display(ListNode head){
+            public  void display(ListNode head){
                 if(head == null){
                     return;
                 }
@@ -112,7 +114,7 @@ public class LinkedList {
                 System.out.println(current);
             }
 
-            public static void main(String[] args) {
+            public  void main(String[] args) {
                 ListNode head = new ListNode(10);
                 ListNode first = new ListNode(20);
                 ListNode second = new ListNode(5);
@@ -124,19 +126,19 @@ public class LinkedList {
                 third.next = fourth;
                 append ap = new append();
                 ap.display(head);
-                ListNode newHead = append.insertAtEnd(head, 15);
-                append.display(newHead);
-                ListNode newHead2 = append.insertAtBeginning(head, 99);
-                append.display(newHead2);
-                append.insertAfter(second,88);
-                append.insertBefore(third, 33);
+                ListNode newHead = ap.insertAtEnd(head, 15);
+                ap.display(newHead);
+                ListNode newHead2 = ap.insertAtBeginning(head, 99);
+                ap.display(newHead2);
+                ap.insertAfter(second,88);
+                ap.insertBefore(third, 33);
 
             }
         }
 
     }
 
-}
+
 
 
 
