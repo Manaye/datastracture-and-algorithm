@@ -1,13 +1,8 @@
 
-
 package linkedlist;
-
 import org.junit.Test;
-
 import java.util.ArrayList;
-
 import static org.junit.Assert.*;
-
 public class LinkedListTest {
     LinkedList test = new LinkedList();
     @Test
@@ -56,14 +51,41 @@ public class LinkedListTest {
         test.insertAfter(90,95);
         assertTrue(test.includes(90));
     }
-  @Test
+    @Test
     public void testGetKfromEnd(){
         test.insert(0);
         test.insert(1);
         test.insert(2);
         assertEquals(0,test.getKFromEnd(1));
-  }
+    }
 
+    @Test
+    public void mergeList() {
+
+        LinkedList oneList = new LinkedList();
+        oneList.insert(1);
+        oneList.insert(3);
+        oneList.insert(2);
+
+        LinkedList twoList = new LinkedList();
+        twoList.insert(5);
+        twoList.insert(9);
+        twoList.insert(4);
+        //merge
+        LinkedList ll = new LinkedList();
+        ll.mergeList(oneList, twoList);
+        //expected
+        LinkedList expectedList = new LinkedList();
+        expectedList.insert(1);
+        expectedList.insert(5);
+        expectedList.insert(3);
+        expectedList.insert(9);
+        expectedList.insert(2);
+        expectedList.insert(4);
+
+        assertTrue("contains the element ", twoList.includes(5));
+
+
+    }
 }
-
 

@@ -2,15 +2,36 @@
 
 package linkedlist;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
 public class LinkedList {
 
     private Node head;
-
+    private LinkedList next;
     public LinkedList() {
         this.head = null;
     }
+
+    public LinkedList mergeList(LinkedList one, LinkedList two){
+        LinkedList first; LinkedList second;
+        LinkedList next1;
+        LinkedList next2;
+        first = one;
+        second= two;
+
+        while (one != null && two != null){
+            next1 = one.next;
+            one.next = two;
+            one = next1;
+
+            next2 = two.next;
+            two.next = next1;
+            two = next2;
+        }
+        return second = two;
+
+    }
+  
 // find K
 
       public int getKFromEnd(int k)  {
@@ -37,9 +58,7 @@ public class LinkedList {
     }
 
     public boolean includes(int value) {
-
         Node current = this.head;
-
         while (current != null) {
             if (value == current.data) {
                 return true;
@@ -49,10 +68,8 @@ public class LinkedList {
         }
         return false;
     }
-
     public ArrayList<Integer> print() {
         Node current = this.head;
-
         ArrayList<Integer> printArr = new ArrayList<>();
         while (current != null) {
             printArr.add(current.data);
@@ -61,6 +78,7 @@ public class LinkedList {
         System.out.println(printArr.toString());
         return printArr;
     }
+
 
     // Linkedlist insertion before and after
     public void append(int value) {
@@ -79,7 +97,6 @@ public class LinkedList {
             return;
         }
         Node current = this.head;
-
         if(value == current.value) {
             insert(newVal);
             return;
@@ -99,7 +116,10 @@ public class LinkedList {
             return;
         }
 
+        Node current = this.head
+
         Node current = this.head;
+
 
         while (current != null) {
             if (current.value == value) {
@@ -109,9 +129,12 @@ public class LinkedList {
             current = current.next;
         }
     }
-
-
 }
+
+
+
+
+
 
 
 
