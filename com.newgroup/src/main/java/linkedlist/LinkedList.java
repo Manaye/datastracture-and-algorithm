@@ -1,6 +1,11 @@
+
+
 package linkedlist;
+
+
 import java.util.ArrayList;
 public class LinkedList {
+
     private Node head;
     private LinkedList next;
     public LinkedList() {
@@ -26,14 +31,16 @@ public class LinkedList {
         return second = two;
 
     }
-    // find K
-    public int getKFromEnd(int k)  {
+  
+// find K
+
+      public int getKFromEnd(int k)  {
         Node current = this.head;
         while (current !=null) {
             Node kAway = current;
             for (int i = 0; i < k; i++) {
                 if(kAway.next == null && i != k-1) {
-                    throw new IndexOutOfBoundsException(" entered value  is greater than total linked list length");
+                   throw new IndexOutOfBoundsException(" entered value  is greater than total linked list length");
                 }
                 kAway = kAway.next;
             }
@@ -44,10 +51,12 @@ public class LinkedList {
         }
         throw new IndexOutOfBoundsException(" entered value is greater than total linked list length");
     }
+
     public void insert(int value) {
         Node newNode = new Node(value, this.head);
         this.head = newNode;
     }
+
     public boolean includes(int value) {
         Node current = this.head;
         while (current != null) {
@@ -69,6 +78,8 @@ public class LinkedList {
         System.out.println(printArr.toString());
         return printArr;
     }
+
+
     // Linkedlist insertion before and after
     public void append(int value) {
         Node current = this.head;
@@ -80,6 +91,7 @@ public class LinkedList {
             current = current.next;
         }
     }
+
     public void insertBefore(int value, int newVal) {
         if (!includes(value)) {
             return;
@@ -89,6 +101,7 @@ public class LinkedList {
             insert(newVal);
             return;
         }
+
         while (current.next != null) {
             if (current.next.value == value) {
                 current.next = new Node(newVal, current.next);
@@ -97,11 +110,17 @@ public class LinkedList {
             current = current.next;
         }
     }
+
     public void insertAfter(int value, int newVal) {
         if (!includes(value)) {
             return;
         }
+
+        Node current = this.head
+
         Node current = this.head;
+
+
         while (current != null) {
             if (current.value == value) {
                 current.next = new Node(newVal, current.next);
@@ -111,3 +130,13 @@ public class LinkedList {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+

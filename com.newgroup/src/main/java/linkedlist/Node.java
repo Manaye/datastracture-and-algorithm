@@ -5,7 +5,6 @@ public class Node {
     public Node next;
     public int value;
 
-
     public Node(int data ,Node next){
         this.data = data;
         this.next = next;
@@ -16,10 +15,11 @@ public class Node {
         this.value = value;
         this.next = null;
 
+    }
 
     }
 
-}
+
 
 
 
