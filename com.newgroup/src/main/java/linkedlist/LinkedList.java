@@ -1,4 +1,5 @@
 
+
 package linkedlist;
 
 import java.util.ArrayList;
@@ -29,15 +30,6 @@ public class LinkedList {
         }
         throw new IndexOutOfBoundsException(" entered value is greater than total linked list length");
     }
-
-
-
-
-
-
-
-
-
 
     public void insert(int value) {
         Node newNode = new Node(value, this.head);
