@@ -1,11 +1,11 @@
-# Binary Search
-<!-- Short summary or background information -->
+# Merge two Linked Lists
+
+This program takes two linked Lists and merges them into one list.
 
 ## Challenge
-<!-- Description of the challenge -->
-
+Write a method for your linked list class that takes two linked list and merge them together.
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Create a new linked list and Merge second linked list into the first one alternatively and returned the newly created linked list.The run time Big O time O(n) and space O(1)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](./asset/ll_merge.jpg)
