@@ -1,3 +1,4 @@
+
 package linkedlist;
 
 import java.util.ArrayList;
@@ -9,6 +10,35 @@ public class LinkedList {
     public LinkedList() {
         this.head = null;
     }
+// find K
+
+      public int getKFromEnd(int k)  {
+        Node current = this.head;
+        while (current !=null) {
+            Node kAway = current;
+            for (int i = 0; i < k; i++) {
+                if(kAway.next == null && i != k-1) {
+                   throw new IndexOutOfBoundsException(" entered value  is greater than total linked list length");
+                }
+                kAway = kAway.next;
+            }
+            if (kAway.next == null) {
+                return current.value;
+            }
+            current = current.next;
+        }
+        throw new IndexOutOfBoundsException(" entered value is greater than total linked list length");
+    }
+
+
+
+
+
+
+
+
+
+
     public void insert(int value) {
         Node newNode = new Node(value, this.head);
         this.head = newNode;
@@ -40,101 +70,54 @@ public class LinkedList {
         return printArr;
     }
 
-    public class append {
-        public class append {
-            private static class ListNode{
-                private int data;
-                private ListNode next;
-                public ListNode(int data){
-                    this.data = data;
-                    this.next = null;
-                }
-
-
+    // Linkedlist insertion before and after
+    public void append(int value) {
+        Node current = this.head;
+        while (current != null) {
+            if (current.next == null) {
+                current.next = new Node(value, null);
+                break;
             }
-            //insertBefore
-            public static ListNode insertAtBeginning(ListNode head, int data) {
-                ListNode newNode = new ListNode(data);
-                if(head == null){
-                    return newNode;
+            current = current.next;
+        }
+    }
 
-                }
-                newNode.next = head;
-                head = newNode;
-                return head;
-            }
-            //insertAtEnd
-            public static ListNode insertAtEnd(ListNode head, int data){
-                ListNode newNode = new ListNode(data);
-                if(head == null){
-                    return newNode;
-                }
-                ListNode current = head;
-                while (null !=current.next){
-                    current = current.next;
+    public void insertBefore(int value, int newVal) {
+        if (!includes(value)) {
+            return;
+        }
+        Node current = this.head;
 
-                }
-                current.next = newNode;
-                return  head;
-
-            }
-            //insertAfter
-            public static void insertAfter(ListNode previous, int data){
-                if(previous == null){
-                    System.out.println("the given previous node cannot be null.");
-                    return;
-                }
-                ListNode newNode = new ListNode(data);
-                newNode.next = previous.next;
-                previous.next = newNode;
-            }
-            //insertBefore
-            public static void insertBefore(ListNode next, int data){
-                if(next == null){
-                    System.out.println("the given next node cannot be null.");
-                    return;
-                }
-                ListNode newNode = new ListNode(data);
-                newNode.next = next.next;
-                next.next = newNode;
-            }
-            //
-            //display
-            public static void display(ListNode head){
-                if(head == null){
-                    return;
-                }
-                ListNode current = head;
-                while(current != null){
-                    System.out.println(current.data + " -->");
-                    current = current.next;
-                }
-                System.out.println(current);
-            }
-
-            public static void main(String[] args) {
-                ListNode head = new ListNode(10);
-                ListNode first = new ListNode(20);
-                ListNode second = new ListNode(5);
-                ListNode third = new ListNode(18);
-                ListNode fourth = new ListNode(11);
-                //form a list
-                head.next = second;
-                second.next = third;
-                third.next = fourth;
-                append ap = new append();
-                ap.display(head);
-                ListNode newHead = append.insertAtEnd(head, 15);
-                append.display(newHead);
-                ListNode newHead2 = append.insertAtBeginning(head, 99);
-                append.display(newHead2);
-                append.insertAfter(second,88);
-                append.insertBefore(third, 33);
-
-            }
+        if(value == current.value) {
+            insert(newVal);
+            return;
         }
 
+        while (current.next != null) {
+            if (current.next.value == value) {
+                current.next = new Node(newVal, current.next);
+                break;
+            }
+            current = current.next;
+        }
     }
+
+    public void insertAfter(int value, int newVal) {
+        if (!includes(value)) {
+            return;
+        }
+
+        Node current = this.head;
+
+        while (current != null) {
+            if (current.value == value) {
+                current.next = new Node(newVal, current.next);
+                break;
+            }
+            current = current.next;
+        }
+    }
+
 
 }
 

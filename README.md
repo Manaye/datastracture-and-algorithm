@@ -1,11 +1,11 @@
-# Binary Search
-<!-- Short summary or background information -->
+# kth from the end of a Linked List
+Find the element k from the end of LinkedList.
 
 ## Challenge
-<!-- Description of the challenge -->
+Inside the linkedList class that an integer k return the value from the end of the list.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+Adding the value from the end of the linkedList.Run time(Big O) time is O(n)and space O(1)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](./asset/ll_kth_from_end.jpg)
