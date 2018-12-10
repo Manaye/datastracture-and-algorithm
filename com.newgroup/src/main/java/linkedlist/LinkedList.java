@@ -1,7 +1,6 @@
 package linkedlist;
 
 import java.util.ArrayList;
-
 public class LinkedList {
 
     private Node head;
@@ -9,6 +8,8 @@ public class LinkedList {
     public LinkedList() {
         this.head = null;
     }
+
+
     public void insert(int value) {
         Node newNode = new Node(value, this.head);
         this.head = newNode;
