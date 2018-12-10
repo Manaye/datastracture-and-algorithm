@@ -1,23 +1,18 @@
-## Singly Linked List
 
-Linkedlist class and node In Java, LinkedList class implements the list interface.
-The LinkedList class also consists of various constructors and methods
+# Linked List Insertions
+
+Appending at the end and inserting before and inserting after a given value in linkedList.
 
 ## Challenge
-
-* create a node and LinkedList class
-* define a method called insert which takes  any value as an argument and add a new node with that value to the head
- * define a method called include which takes  any value as an argument returns boolean  result
-* define a method called print  which takes no arguments and outputs all of the current Node values in the linked list
+1. Append to your linked list class that takes value and add at the end of the linkedList.
+1. Insertion before to your linkedList class that takes a value and new value.
+1. Insertion after method to your linkedList class that takes in a value and new value.
 
 ## Approach & Efficiency
+It requires to traverese the linkedList until we find the last node we do that in while loop and until we find that the last node next is pointing to null value and we then insert a new node.
+And all this method takes O(n) time and O(1) space
+## Solution
 
-The includes and print methods iterate over the nodes while the last node next is not pointing to null.
-Includes uses if statement to check if the value exists or not and return a boolean.
-Big O of include is O(n) time and space O(1) , insert O(1) time and O(1) space and print O (n) time and O(1)space.
-
-## API
- 1. insert
- 1. include
- 1. print
+![](./asset/ll_insertion.jpg)
+![](./asset/ll_insertion2.jpg)
 
