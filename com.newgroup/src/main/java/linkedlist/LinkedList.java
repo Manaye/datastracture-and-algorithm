@@ -1,4 +1,5 @@
 
+
 package linkedlist;
 
 import java.util.ArrayList;
@@ -10,6 +11,26 @@ public class LinkedList {
     public LinkedList() {
         this.head = null;
     }
+// find K
+
+      public int getKFromEnd(int k)  {
+        Node current = this.head;
+        while (current !=null) {
+            Node kAway = current;
+            for (int i = 0; i < k; i++) {
+                if(kAway.next == null && i != k-1) {
+                   throw new IndexOutOfBoundsException(" entered value  is greater than total linked list length");
+                }
+                kAway = kAway.next;
+            }
+            if (kAway.next == null) {
+                return current.value;
+            }
+            current = current.next;
+        }
+        throw new IndexOutOfBoundsException(" entered value is greater than total linked list length");
+    }
+
     public void insert(int value) {
         Node newNode = new Node(value, this.head);
         this.head = newNode;
@@ -41,7 +62,7 @@ public class LinkedList {
         return printArr;
     }
 
-// Linkedlist insertion before and after
+    // Linkedlist insertion before and after
     public void append(int value) {
         Node current = this.head;
         while (current != null) {
@@ -91,7 +112,6 @@ public class LinkedList {
 
 
 }
-
 
 
 

@@ -1,4 +1,5 @@
 
+
 package linkedlist;
 
 import org.junit.Test;
@@ -55,6 +56,13 @@ public class LinkedListTest {
         test.insertAfter(90,95);
         assertTrue(test.includes(90));
     }
+  @Test
+    public void testGetKfromEnd(){
+        test.insert(0);
+        test.insert(1);
+        test.insert(2);
+        assertEquals(0,test.getKFromEnd(1));
+  }
 
 }
 

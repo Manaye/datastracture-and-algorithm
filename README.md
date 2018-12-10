@@ -1,18 +1,13 @@
 
-# Linked List Insertions
-
-Appending at the end and inserting before and inserting after a given value in linkedList.
+# kth from the end of a Linked List
+Find the element k from the end of LinkedList.
 
 ## Challenge
-1. Append to your linked list class that takes value and add at the end of the linkedList.
-1. Insertion before to your linkedList class that takes a value and new value.
-1. Insertion after method to your linkedList class that takes in a value and new value.
+Inside the linkedList class that an integer k return the value from the end of the list.
 
 ## Approach & Efficiency
-It requires to traverese the linkedList until we find the last node we do that in while loop and until we find that the last node next is pointing to null value and we then insert a new node.
-And all this method takes O(n) time and O(1) space
-## Solution
+Adding the value from the end of the linkedList.Run time(Big O) time is O(n)and space O(1)
 
-![](./asset/ll_insertion.jpg)
-![](./asset/ll_insertion2.jpg)
+## Solution
+![](./asset/ll_kth_from_end.jpg)
 
