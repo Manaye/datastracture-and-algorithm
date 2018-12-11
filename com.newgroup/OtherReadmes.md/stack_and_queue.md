@@ -16,9 +16,12 @@ returns the node located on the top of the stack.
 
 ## Approach & Efficiency
 
-the run time or BIG O of this is O(n)and space O(1)
+the run time or BIG O of this is O(1)and space O(1)
 ## API
 
-1.push
-1.pop
-1.peek
+1. Stack
+1. Queue
+1. peek
+
+
+
