@@ -116,7 +116,6 @@ public class LinkedList {
             return;
         }
 
-        Node current = this.head
 
         Node current = this.head;
 
