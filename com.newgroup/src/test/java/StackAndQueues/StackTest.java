@@ -26,7 +26,7 @@ public class StackTest {
 
     @Test
     public void peekTest() {
-        Stack Stack = new Stack<>();
+        Stack Stack = new Stack();
         Stack.push(4);
         Stack.push(2);
         Stack.peek();
