@@ -9,6 +9,7 @@ public class AnimalShelterTest {
     @Test
     public void testEnqueue() {
         for (int i = 0; i < 4; i++) {
+
             shelter.enqueue(AnimalShelter.AnimalType.DOG);
             shelter.enqueue(AnimalShelter.AnimalType.CAT);
         }
@@ -27,7 +28,7 @@ public class AnimalShelterTest {
         shelter.dequeue(AnimalShelter.AnimalType.CAT);
     }
 
-    assertEquals(2,shelter.cats.size()==2);
-    assertEquals(2,shelter.dogs.size()==2);
+    assertEquals(2,shelter.cats.size());
+    assertEquals(2,shelter.dogs.size());
     }
 }

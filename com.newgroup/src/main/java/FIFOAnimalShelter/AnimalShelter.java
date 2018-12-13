@@ -2,14 +2,16 @@ package FIFOAnimalShelter;
 
 import java.util.LinkedList;
 import java.util.NoSuchElementException;
+import java.util.Queue;
+
 public class AnimalShelter {
 
         public enum AnimalType{
             DOG, CAT        }
 
         private int animalId;
-        LinkedList<Integer> cats;
-        LinkedList<Integer> dogs;
+        Queue<Integer> cats;
+        Queue<Integer> dogs;
 
         public AnimalShelter(){
             cats = new LinkedList<Integer>();
@@ -33,10 +35,10 @@ public class AnimalShelter {
            Integer dequed = null;
             switch(type){
                 case DOG:
-                    dequed= dogs.pop();
+                    dequed= dogs.remove();
                      break;
                 case CAT:
-                   dequed = cats.pop();
+                   dequed = cats.remove();
                     break;
                     default: return null;
             }
